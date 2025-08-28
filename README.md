@@ -1,5 +1,5 @@
 # Seven Segment Display Driver (0–9) – VHDL Project
-
+ 
 ## Project Overview
 This project implements a **7-segment display driver** in VHDL that takes a 4-bit binary input (0–9) and generates the corresponding active-high segment outputs (`a–g`).  
 The design is purely **combinational** and verified using ModelSim.
