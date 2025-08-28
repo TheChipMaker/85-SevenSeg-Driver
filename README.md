@@ -4,6 +4,8 @@
 This project implements a **7-segment display driver** in VHDL that takes a 4-bit binary input (0–9) and generates the corresponding active-high segment outputs (`a–g`).  
 The design is purely **combinational** and verified using ModelSim.
 
+This project is synthesizable and suitable for Synopsys tools, and simulation is done using ModelSim.
+
 ## Inputs and Outputs
 | Signal | Direction | Description |
 |--------|-----------|-------------|
@@ -12,7 +14,7 @@ The design is purely **combinational** and verified using ModelSim.
 
 ## Segment Mapping (active high)
 
-![Segment Mapping](relative/path/to/Segments.png)
+![7-Segment Driver Simulation](Segments.png)
 
 Decimal | Input (A) | Output (Y)   | Segments (a–g)
 --------|------------|--------------|----------------------------
@@ -49,16 +51,16 @@ Expected behavior:
 - Inputs `0–9`: correct digit shown  
 - Inputs `10–15`: blank output
 
-  | Decimal | Input (A) | Output (Y) | Segments (a–g) | Expected |
-|---------|-----------|------------|----------------|----------|
-| 0 | 0000 | 1111110 | a b c d e f | ✅ |
-| 1 | 0001 | 0110000 | b c | ✅ |
-| 2 | 0010 | 1101101 | a b d e g | ✅ |
-| 3 | 0011 | 1111001 | a b c d g | ✅ |
-| 4 | 0100 | 0110011 | b c f g | ✅ |
-| 5 | 0101 | 1011011 | a c d f g | ✅ |
-| 6 | 0110 | 1011111 | a c d e f g | ✅ |
-| 7 | 0111 | 1110000 | a b c | ✅ |
-| 8 | 1000 | 1111111 | a b c d e f g | ✅ |
-| 9 | 1001 | 1111011 | a b c d f g | ✅ |
-| Other | 1010–1111 | 0000000 | none | ✅ |
+   | Decimal | Input (A) | Output (Y) | Segments (a–g) | Expected |
+   |---------|-----------|------------|----------------|----------|
+   | 0 | 0000 | 1111110 | a b c d e f | ✅ |
+   | 1 | 0001 | 0110000 | b c | ✅ |
+   | 2 | 0010 | 1101101 | a b d e g | ✅ |
+   | 3 | 0011 | 1111001 | a b c d g | ✅ |
+   | 4 | 0100 | 0110011 | b c f g | ✅ |
+   | 5 | 0101 | 1011011 | a c d f g | ✅ |
+   | 6 | 0110 | 1011111 | a c d e f g | ✅ |
+   | 7 | 0111 | 1110000 | a b c | ✅ |
+   | 8 | 1000 | 1111111 | a b c d e f g | ✅ |
+   | 9 | 1001 | 1111011 | a b c d f g | ✅ |
+   | Other | 1010–1111 | 0000000 | none | ✅ |
